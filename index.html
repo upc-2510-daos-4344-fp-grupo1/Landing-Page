@@ -33,6 +33,44 @@
 
 <body>
 #COPY HERE
+## 3.2. User Stories
+El siguiente conjunto de User Stories y Epics define los requisitos funcionales y técnicos de la aplicación TrackZone, diseñada para optimizar la supervisión de equipos de trabajo en la industria de la construcción. Estas historias consideran los distintos roles de usuarios: trabajadores, supervisores, visitantes del sitio web.
+|Story ID|Titulo|Descripción|Criterios de Aceptación|Relacionado con (Epic ID)|
+|----|----|----|----|----|
+|E1-US01|Registro de horas|**Como** trabajador **quiero** poder registrar la jornada laboral **para** que el supervisor tenga visibilidad de mis horarios|**Dado** que el usuario es un trabajador **cuando** inicia o finaliza su jornada **entonces** el sistema debe registrar la hora exacta.| **1** |
+|E1-US02|Reporte de incidente|**Como** trabajador **quiero** poder registrar reportes de incidentes **para** que el reporte con evidencia exista|**Dado** que el trabajador selecciona "reportar incidente" **cuando** adjunta una imagen y descripción **entonces** el sistema debe guardar y alertar al supervisor en tiempo real| **1** |
+|E1-US03|Confirmación de tareas asignadas|**Como** trabajador **quiero** ver las tareas asignadas y marcarlas como completadas **para** informar mi avance|**Dado** que el trabajador accede a su panel de tareas **cuando** marca una tarea como completada, **entonces** el supervisor recibe una notificación y se actualiza el estado de la tarea| **1** |
+|E1-US04|Visualización de tareas|**Como** trabajador **quiero** ver una lista clara de mis tareas pendientes **para** organizar mi día eficientemente|**Dado** que el trabajador accede al sistema **cuando** entra a “Mis Tareas” **entonces** se muestran todas las tareas activas, con fecha y prioridad| **1** |
+|E2-US01|Visualización de panel de control|**Como** supervisor **quiero** visualizar un panel con el estado de los trabajadores **para** tener control de sus tares en tiempo real|**Dado** que el supervisor entra al panel **cuando** hay nuevos registros o cambios **entonces** se muestra la información actualizada| **2** |
+|E2-US02|Asignación de tareas|**Como** supervisor **quiero** asignar tareas a diferentes miembros de equipo **para** planificar la ejecucion de las mismas|**Dado** que el supervisor selecciona un trabajador **cuando** asigna tareas específicas **entonces** estas aparecen en el panel de los trabajadores correspondientes| **2** |
+|E2-US03|Recepcion de alertas|**Como** supervisor **quiero** recibir notificaciones de incidentes reportados **para** dar soluciones inmediatas|**Dado** que un trabajador reporta un incidente **cuando** el sistema lo registra **entonces** se genera una alerta en el panel del supervisor| **2** |
+|E2-US04|Acceso a historial de reportes|**Como** supervisor **quiero** acceder al historial de reportes **para** revisar incidentes anteriores y patrones|**Dado** que el supervisor busca por fecha o trabajador **cuando** elige una entraada **entonces** puede ver los detalles y archivos adjuntos| **2** |
+|E2-US05|Gestión de roles| **Como** supervisor **quiero** asignar roles distintos **para** controlar accesos| **Dado** que el administrador crea o edita un usuario **cuando** asigna un rol **entonces** las funciones disponibles para ese usuario se actualizan | **2** |
+|E2-US06|Calendario de tareas|**Como** supervisor **quiero** ver un calendario con las tareas programadas **para** visualizar la planificación general|**Dado** que el supervisor accede a la sección calendario **cuando** selecciona un día **entonces** se muestran las tareas planificadas con sus responsables| **2** |
+|E2-US07|Filtro por tipo de incidente|**Como** supervisor **quiero** filtrar los incidentes por tipo **para** identificar patrones|**Dado** que accede al listado de incidentes **cuando** aplica un filtro de tipo **entonces** el sistema muestra solo los casos correspondientes| **2** |
+|E2-US08|Filtro por fecha de incidente| **Como** supervisor **quiero** filtrar los incidentes por fecha **para** identificar patrones|**Dado** que accede al listado de incidentes **cuando** aplica un filtro de fecha **entonces** el sistema muestra solo los casos correspondientes| **2** |
+|E2-US09|Reasignación de tareas|**Como** supervisor **quiero** poder reasignar tareas a otros trabajadores **para** asegurar la continuidad del trabajo ante cualquier eventualidad|**Dado** que ocurre una eventualidad, **cuando** el supervisor reasigna la tarea a otro trabajador **entonces** este nuevo responsable recibe una notificación con la información de reasignación| **2** |
+|E2-US10|Generación de reportes|**Como** supervisor **quiero** visualizar una tabla con la informacion relevante de los incidentes **para** poder contrastar la informacion|**Dado** que el supervisor selecciona un rango de fechas **cuando** hace click en "Generar reporte" **entonces** se genera una tabla con los datos consolidados| **2** |
+|E3-US01|Visitante al landing page|**Como** visitante al landing page **quiero** obtener información relevante **para** decidir si estoy interesado en el producto |**Dado** que el visitante se encuentra en el landing page **cuando** navega a las secciones relevantes **entonces** decide su interes por el producto| **3** |
+
+## 3.4. Product Backlog
+|# Orden|User Story ID|Título|Descripción|Story Points|
+|--|----|-----|-------------|--|
+|1|E3-US01|Visitante al landing page|Como visitante al landing page quiero obtener información relevante para decidir si estoy interesado.|3|
+|2|E1-US04|Visualización de tareas|Como trabajador quiero ver una lista clara de mis tareas pendientes para organizar mi día.|3|
+|3|E1-US03|Confirmación de tareas|Como trabajador quiero marcar tareas como completadas para informar mi avance.|5|
+|4|E1-US01|Registro de horas|Como trabajador quiero registrar mi jornada laboral para que el supervisor tenga visibilidad.|3|
+|5|E2-US02|Asignación de tareas|Como supervisor quiero asignar tareas a miembros del equipo para planificar su ejecución.|5|
+|6|E1-US02|Reporte de incidente|Como trabajador quiero registrar reportes de incidentes con evidencia.|5|
+|7|E2-US03|Recepción de alertas|Como supervisor quiero recibir notificaciones de incidentes.|5|
+|8|E2-US01|Visualización de panel|Como supervisor quiero visualizar un panel con el estado de los trabajadores.|3|
+|9|E2-US06|Calendario de tareas|Como supervisor quiero ver un calendario con tareas programadas.|3|
+|10|E2-US10|Generación de reportes|Como supervisor quiero generar tablas con la información relevante de los incidentes.|5|
+|11|E2-US04|Acceso a historial|Como supervisor quiero acceder al historial de reportes.	|3|
+|12|E2-US09|Reasignación de tareas|Como supervisor quiero reasignar tareas ante eventualidades.|3|
+|13|E2-US07|Filtro por tipo de incidente|Como supervisor quiero filtrar incidentes por tipo.|2|
+|14|E2-US08|Filtro por fecha de incidente|Como supervisor quiero filtrar incidentes por fecha.|2|
+|15|E2-US05|Gestión de roles|Como supervisor quiero asignar roles distintos para controlar accesos.|3|
 
 </body>
 
